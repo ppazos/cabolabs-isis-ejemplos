@@ -1,0 +1,1 @@
+java -cp app.jar;%GROOVY_HOME%\embeddable\groovy-all-2.3.0.jar App %1

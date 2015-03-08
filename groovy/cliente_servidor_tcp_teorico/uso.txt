@@ -1,0 +1,24 @@
+
+1. Necesita tener %GROOVY_HOME%\bin en Path para que groovyc esté disponible en la consola
+2. Verifique si versión de groovy y actualice la versión en groovy-all-VERSION.jar
+3. %JAVA_HOME%\bin debe estar en Path para que los comandos jar y java estén disponible en la consola
+
+
+-- COMPILACION
+
+groovyc -cp .;%GROOVY_HOME%\embeddable\groovy-all-2.1.1.jar -d bin -j -Jsourcepath src src/Main.groovy
+
+
+-- EMPAQUETADO
+
+jar -cfv tcp.jar -C bin .
+
+
+-- EJECUCION
+
+
+java -cp tcp.jar;%GROOVY_HOME%\embeddable\groovy-all-2.1.1.jar Main server port
+
+
+java -cp tcp.jar;%GROOVY_HOME%\embeddable\groovy-all-2.1.1.jar Main client serverPort serverIP
+

@@ -1,0 +1,1 @@
+jar -cfv app.jar -C bin .
