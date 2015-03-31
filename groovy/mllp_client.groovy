@@ -44,7 +44,7 @@ class MLLPClient {
                try
                {
                   data = input.readLine()
-                  if (!data) hasData = dalse
+                  if (!data) hasData = false
                   else println "MLLPClient recibe: " + data // NO PROCESA LOS CARACTERES MLLP!
                }
                catch (Exception e)
